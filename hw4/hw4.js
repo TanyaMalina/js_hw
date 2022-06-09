@@ -9,7 +9,7 @@
 {
     let arr = [-2, -1, -3, 15, 0, -4, 2, -5, 9, -15, 0, 4, 5, -6, 10, 7];
 
-    for (el of arr) if (el > -10 && el < -3) console.log(el);
+    for (let el of arr) if (el > -10 && el < -3) console.log(el);
 }
 
 //3
@@ -39,7 +39,7 @@
 //4
 {
     let arr = ['10', '20', '30', '50', '235', '3000'];
-    for (el of arr) if (el[0] === '1' || el[0] === '2' || el[0] === '5') console.log(el);
+    for (let el of arr) if (el[0] === '1' || el[0] === '2' || el[0] === '5') console.log(el);
 }
 
 //5
@@ -92,7 +92,7 @@
     let arr = [5, 9, 21, , , 9, 78, , , , 6];
     let count = 0;
 
-    for (el of arr) if (el === undefined) count += 1;
+    for (let el of arr) if (el === undefined) count += 1;
     console.log(count);
 }
 
