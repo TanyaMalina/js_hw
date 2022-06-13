@@ -1,6 +1,6 @@
 //1
 {
-    let calculation = function (a, b, c) {
+    const calculation = function (a, b, c) {
         return (a - b) / c;
     }
 
@@ -9,7 +9,7 @@
 
 //2
 {
-    let calculation = function (num, exp) {
+    const calculation = function (num, exp) {
         return Math.pow(num, exp);
     }
 
@@ -18,7 +18,7 @@
 
 //
 {
-    let getMinMax = function (a, b, min) {
+    const getMinMax = function (a, b, min) {
         return (min) ? 'Минимальное число: ' + Math.min(a, b) : 'Максимальное число: ' + Math.max(a, b);
     }
 
@@ -107,7 +107,7 @@
 
         let fibArr = [0, 1];
 
-        for (let i = 2; (fibArr[i - 1] + fibArr[i - 2]) <= 1000; i++) fibArr.push(fibArr[i - 1] + fibArr[i - 2]);
+        for (let i = 1; (fibArr[i] + fibArr[i - 1]) <= 1000; i++) fibArr.push(fibArr[i] + fibArr[i - 1]);
         return fibArr;
     }
 
