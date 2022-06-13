@@ -61,18 +61,11 @@
 
 //7
 {
-    let rows = prompt();
-
     function drawPyramid(rows) {
-
-        if (rows >= 0) {
-            for (let i = 1; i <= rows; i++) console.log(String(i).repeat(i));
-        } else {
-            for (let i = 1; i <= 9; i++) console.log('*'.repeat(i));
-        }
+        for (let i = 1; i <= rows; i++) console.log((arguments[1] === undefined || arguments[1] === ' ' || arguments[1] === '') ? String(i).repeat(i) : arguments[1].repeat(i));
     }
 
-    drawPyramid(rows);
+    drawPyramid(9, '$');
 }
 
 //8
