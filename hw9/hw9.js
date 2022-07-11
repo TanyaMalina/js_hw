@@ -57,8 +57,6 @@ taskAdd_Input.addEventListener('keyup', taskAdd);
 
 
 //edit
-let edit_btn = document.querySelector('.edit_btn');
-
 const editTask = function (event) {
 
     let changeText = prompt();
