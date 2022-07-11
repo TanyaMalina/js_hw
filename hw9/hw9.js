@@ -2,7 +2,7 @@ let taskAdd_Input = document.querySelector('input[name = "taskAdd"]');
 let tasks_list = document.querySelector('.tasks_list');
 
 //check
-let checkTask = function (event) {
+const checkTask = function (event) {
 
     if (event.target.tagName === "BUTTON") return;
 
@@ -16,7 +16,7 @@ let checkTask = function (event) {
 }
 
 //add
-let taskAdd = function (event) {
+const taskAdd = function (event) {
 
     let taskText = taskAdd_Input.value;
     let tasks = document.querySelectorAll('.task');
@@ -59,7 +59,7 @@ taskAdd_Input.addEventListener('keyup', taskAdd);
 //edit
 let edit_btn = document.querySelector('.edit_btn');
 
-let editTask = function (event) {
+const editTask = function (event) {
 
     let changeText = prompt();
 
@@ -78,7 +78,7 @@ let editTask = function (event) {
 //clear
 let clearList_btn = document.querySelector('.clearList_btn');
 
-let clearList = function () {
+const clearList = function () {
     let tasks = document.querySelectorAll('.task');
     tasks.forEach(task => tasks_list.removeChild(task));
 }
