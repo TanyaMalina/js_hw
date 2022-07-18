@@ -1,35 +1,35 @@
-window.addEventListener('load', function () {
+const filter = function () {
 
-    const filter = function () {
+    let portfolioFilter = document.querySelectorAll('.portfolio__filter li');
+    let portfolioList = document.querySelectorAll('.portfolio__list li');
 
-        let portfolioFilter = document.querySelectorAll('.portfolio__filter li');
-        let portfolioList = document.querySelectorAll('.portfolio__list li');
+    portfolioList.forEach(elem => elem.classList.add('active'));
 
-        const filterPicture = function () {
+    const filterPicture = function () {
 
-            portfolioFilter.forEach(element => {
-                element.classList.remove('active');
-            })
+        portfolioFilter.forEach(elem => {
+            elem.classList.remove('active');
+        })
 
-            portfolioList.forEach(element => {
+        if (!this.classList.contains('active')) this.classList.add('active');
 
-                if (!this.classList.contains('active')) this.classList.add('active');
+        portfolioList.forEach(elem => {
 
-                if (element.dataset.filter === this.dataset.filter || this.dataset.filter === 'all') {
-                    element.classList.remove('display_none');
-                } else if (!element.classList.contains('display_none')) {
-                    element.classList.add('display_none');
-                }
+            if (elem.dataset.filter === this.dataset.filter || this.dataset.filter === 'all') {
+                elem.classList.add('active');
+            } else if (elem.classList.contains('active')) {
+               elem.classList.remove('active');
+            }
 
-            })
-
-        }
-
-        portfolioFilter.forEach(element => {
-            element.addEventListener('click', filterPicture);
         })
 
     }
 
+    portfolioFilter.forEach(elem => {
+        elem.addEventListener('click', filterPicture);
+    })
+}
+
+window.addEventListener('load', function () {
     filter();
 })

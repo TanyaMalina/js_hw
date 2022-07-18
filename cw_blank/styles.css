@@ -72,7 +72,7 @@ ul {
 }
 
 .portfolio__list li {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: white;
     padding: 10px;
@@ -86,8 +86,5 @@ ul {
 
 .active {
     color: #c7ad21;
-}
-
-.display_none {
-    display: none !important;
+    display: flex !important;
 }
