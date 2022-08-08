@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+    width: 100%;
+}
+
+body {
+    background-color: #ccc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5%;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__list {
+    display: flex;
+}
+
+.slider__items__wrapper {
+    display: flex;
+    flex: none;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slider__item {
+    width: 20%;
+}
+
+.slider__item > img {
+    width: 100%;
+    min-height: 100%;
+    padding: 2%;
+}
+
+.slider__btns {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.slider__btn {
+    background-color: transparent;
+    border: 0;
+
+    width: 40px;
+    height: 40px;
+    font-family: monospace;
+    font-size: 32px;
+    color: #062045;
+    cursor: pointer;
+}
+
+.slider__btn span {
+    vertical-align: 15px;
+}
+
+.slider__btn:hover {
+    box-shadow: 0 0 10px #999;
+}
+
+.slider__owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.slider__owl-dot {
+    background-color: #407f92;
+    border: 0;
+    border-radius: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+.slider__owl-dot:hover {
+    background-color: #062045;
+}
+
+.slider__owl-dot.active {
+    background-color: #062045;
+}
