@@ -229,7 +229,7 @@ class ContactsApp extends Contacts {
             const newDataContact = {};
 
             this.#contactsFormInputs.forEach(inputElem => {
-                if(inputElem.value) newDataContact[inputElem.name] = inputElem.value;
+                if(inputElem.value && inputElem.value.length > 0) newDataContact[inputElem.name] = inputElem.value;
                 inputElem.value = '';
             })
 
@@ -257,7 +257,7 @@ class ContactsApp extends Contacts {
         const dataContact = contact.get()
 
         this.#contactsFormInputs.forEach(inputElem => {
-            inputElem.value = dataContact[inputElem.name];
+            if(dataContact[inputElem.name]) inputElem.value = dataContact[inputElem.name];
         })
     }
 
