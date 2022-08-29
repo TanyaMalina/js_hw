@@ -75,8 +75,18 @@ h1 {
     margin-right: 20px;
 }
 
-.contact__data{
+.contact__data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact__data span{
     white-space: normal;
+}
+
+.contact__phone {
+    font-size: 16px;
 }
 
 .contacts__btn_close {

@@ -36,8 +36,6 @@ class Contacts {
         const contact = new Contact(dataContact);
         const noteKeys = Object.keys(contact.get());
 
-        console.log(contact)
-
         if (noteKeys.length === 0) return;
 
         this.#lastId++;
@@ -172,15 +170,25 @@ class ContactsApp extends Contacts {
             contactNumELem.classList.add('contact__num');
             contactNumELem.innerHTML = `${index + 1}`;
 
-            const contactDataELem = document.createElement('span');
+            const contactDataELem = document.createElement('div');
             contactDataELem.classList.add('contact__data');
-            contactDataELem.innerHTML = `${contact.name}`;
+            contactElem.append(contactNumELem, contactDataELem);
+
+            const contactDataName = document.createElement('span');
+            contactDataName.innerHTML = `${contact.name}`;
+            contactDataELem.append(contactDataName);
+
+            if (contact.phone && contact.phone.length > 0) {
+                const contactDataPhone = document.createElement('span');
+                contactDataPhone.classList.add('contact__phone');
+                contactDataPhone.innerHTML = `${contact.phone}`;
+                contactDataELem.append(contactDataPhone);
+            }
 
             const contactRemoveBtn = document.createElement('button');
             contactRemoveBtn.classList.add('contacts__btn_close');
             contactRemoveBtn.innerHTML = '+';
-
-            contactElem.append(contactNumELem, contactDataELem, contactRemoveBtn);
+            contactElem.append(contactRemoveBtn);
 
             contactElem.addEventListener('click', (event) => {
                 this.onEdit(event, id);
