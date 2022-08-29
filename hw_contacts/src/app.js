@@ -237,7 +237,7 @@ class ContactsApp extends Contacts {
 
         } else {
             this.#contactsFormInputs.forEach(inputElem => {
-                this.add({[inputElem.name]: inputElem.value});
+                if(inputElem.value && inputElem.value.length > 0) this.add({[inputElem.name]: inputElem.value});
 
                 inputElem.value = '';
             })
