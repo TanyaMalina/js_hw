@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeecea;
+}
+
+.contacts {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+h1 {
+    color: #45959a;
+    padding: 10px 0;
+}
+
+.header {
+    padding-top: 2%;
+    display: flex;
+    width: 80%;
+    background-color: #eeecea;
+
+    position: fixed;
+    z-index: 1;
+}
+
+.add_btn, .form_edit_btn_save {
+    border: 0;
+    background-color: #45959a;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    padding: 5px 50px;
+
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contacts__list {
+    padding-top: 100px;
+
+    padding-bottom: 5%;
+    position: relative;
+    overflow: auto;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: rgba(69, 149, 154, 0.2);
+}
+
+.contact__num {
+    color: #c2c0be;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.contact__data{
+    white-space: normal;
+}
+
+.contacts__btn_close {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    font-size: 28px;
+
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.contacts__btn_close:hover{
+    color: #2B7779;
+}
+
+.contacts__form_edit {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1%;
+    background-color: #aacbcb;
+
+    font-size: 20px;
+    min-width: 600px;
+
+    border-radius: 5%;
+    box-shadow: 0 0 15px #999;
+
+    position: fixed;
+    z-index: 1;
+
+    top: 175px;
+    right: 15%;
+}
+
+.show{
+    display: flex;
+}
+
+.form_edit_input {
+    min-width: calc(90%);
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.form_edit_btn_save {
+    width: 100px;
+    margin: 20px 0;
+    padding: 5px 20px;
+}
+
+
