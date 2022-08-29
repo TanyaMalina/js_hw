@@ -229,7 +229,7 @@ class ContactsApp extends Contacts {
             const newDataContact = {};
 
             this.#contactsFormInputs.forEach(inputElem => {
-                newDataContact[inputElem.name] = inputElem.value;
+                if(inputElem.value) newDataContact[inputElem.name] = inputElem.value;
                 inputElem.value = '';
             })
 
